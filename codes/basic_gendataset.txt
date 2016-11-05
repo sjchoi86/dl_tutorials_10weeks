@@ -138,3 +138,4 @@ for i in randidx:
     title_string = "[%d] %d-class" % (i, currlabel)
     plt.title(title_string) 
     plt.show() 
+
