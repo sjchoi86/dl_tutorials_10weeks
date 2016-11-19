@@ -1,0 +1,100 @@
+import os
+import numpy as np
+import tensorflow as tf
+import matplotlib.pyplot as plt
+%matplotlib inline  
+print ("Packages loaded")
+
+# LOAD DATA
+cwd = os.getcwd()
+loadpath = cwd + "/data.npz"
+l = np.load(loadpath)
+print (l.files)
+
+# PARSE LOADED DATA
+trainimg   = l['trainimg']
+trainlabel = l['trainlabel']
+testimg    = l['testimg']
+testlabel  = l['testlabel']
+ntrain = trainimg.shape[0]
+nclass = trainlabel.shape[1]
+dim    = trainimg.shape[1]
+ntest  = testimg.shape[0]
+print ("%d TRAIN IMAGES" % (ntrain))
+print ("%d TEST IMAGES" % (ntest))
+print ("%d DIMENSIONAL INPUT" % (dim))
+print ("%d CLASSES" % (nclass))
+
+tf.set_random_seed(0)
+
+# MULTILAYER PERCEPTRON MODEL
+n_input    = dim    # INPUT LAYER DIMENSION
+n_hid1     = 512    # 1ST HIDDEN LAYER DIMENSION
+n_hid2     = 256    # 2ND HIDDEN LATER DIMENSION
+n_output   = nclass # OUTPUT LAYER DIMENSION
+x = tf.placeholder("float", [None, dim]) 
+y = tf.placeholder("float", [None, nclass]) 
+std = 0.1 
+W = {
+    'h1': tf.Variable(tf.random_normal([n_input, n_hid1], stddev=std)),
+    'h2': tf.Variable(tf.random_normal([n_hid1, n_hid2], stddev=std)),
+    'out': tf.Variable(tf.random_normal([n_hid2, n_output], stddev=std))
+}
+b = {
+    'b1': tf.Variable(tf.random_normal([n_hid1])),
+    'b2': tf.Variable(tf.random_normal([n_hid2])),
+    'out': tf.Variable(tf.random_normal([n_output]))
+}
+def multilayer_perceptron(_x, _W, _b):
+    layer_1 = tf.nn.relu(tf.add(tf.matmul(_x, _W['h1']), _b['b1'])) 
+    layer_2 = tf.nn.relu(tf.add(tf.matmul(layer_1, _W['h2']), _b['b2']))
+    return tf.matmul(layer_2, _W['out']) + _b['out']
+print ("MULTILAYER PERCEPTRON MODEL READY")
+
+learning_rate = 0.001
+pred = multilayer_perceptron(x, W, b)
+ce_cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(pred, y)) 
+WEIGHT_DECAY_FACTOR = 0.001 
+l2_loss = tf.add_n([tf.nn.l2_loss(v) 
+            for v in tf.trainable_variables()])
+cost = ce_cost + WEIGHT_DECAY_FACTOR*l2_loss
+optm = tf.train.AdamOptimizer(learning_rate).minimize(cost) 
+corr = tf.equal(tf.argmax(pred, 1), tf.argmax(y, 1))    
+accr = tf.reduce_mean(tf.cast(corr, tf.float32))
+init = tf.initialize_all_variables()
+print ("FUNCTIONS READY")
+
+# PARAMETERS
+batch_size      = 256
+display_step    = 20
+training_epochs = 400
+num_batch = int(ntrain/batch_size)+1
+
+# LAUNCH THE GRAPH
+sess = tf.Session()
+sess.run(init)
+for epoch in range(training_epochs):
+    avg_cost = 0.
+    randpermlist = np.random.permutation(ntrain)
+    for i in range(num_batch): 
+        randidx  = randpermlist[i*batch_size:min((i+1)*batch_size, ntrain-1)]
+        batch_xs = trainimg[randidx, :]
+        batch_ys = trainlabel[randidx, :]                
+        feeds    = {x: batch_xs, y: batch_ys}
+        # OPTIMIZE VARIABLES
+        sess.run(optm, feed_dict=feeds)
+        # COMPUTE LOSS
+        avg_cost += sess.run(cost, feed_dict=feeds)/num_batch
+
+    # PRINT CURRENT STATUS
+    if epoch % display_step == 0 or epoch == training_epochs-1:
+        print ("Epoch: %03d/%03d cost: %.9f" % 
+               (epoch, training_epochs, avg_cost))
+        feeds = {x: trainimg, y: trainlabel}
+        train_acc = sess.run(accr, feed_dict=feeds)
+        feeds = {x: testimg, y: testlabel}
+        test_acc = sess.run(accr, feed_dict=feeds)
+        print (" TRAIN ACCURACY: %.3f" % (train_acc))
+        print (" TEST ACCURACY: %.3f" % (test_acc))
+print ("OPTIMIZATION FINISHED")
+
