@@ -1,4 +1,5 @@
-# Deep Learning Tutorial covers following topics and papers
+# Deep Learning Tutorial covers 
+## following topics (papers)
 
 ### Modern CNNs
 - ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)
@@ -70,3 +71,18 @@
 - Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks
 - Generative Adversarial Text to Image Synthesis
 - Pixel Level Domain Transfer
+
+## and implementations
+- Basic Python usage (numpy, matplotlib, ..)
+- Handling MNIST
+- Logistic regression
+- Multilayer Perceptron
+- Convolutional Neural Network 
+- Denoising Autoencoders (+Convolutional)
+- Class Activation Map
+- Semantic Segmentation 
+- Using Custom Dataset
+- Recurrent Neural Network
+- Char-RNN
+- Word2Vec
+- Neural Style
