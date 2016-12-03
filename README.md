@@ -1,6 +1,5 @@
-# Deep Learning Tutorial covers 
-## following topics (papers)
-
+# Deep Learning Tutorial 
+## Topics (papers)
 ### Modern CNNs
 - ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)
 - Going Deeper with Convolutions (GoogLeNet)
