@@ -1,4 +1,4 @@
-# Deep Learning Tutorial 
+# Deep Learning Tutorial (Paper study + TF implementations)
 ## Topics (papers)
 ### Modern CNNs
 - ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)
@@ -71,7 +71,7 @@
 - Generative Adversarial Text to Image Synthesis
 - Pixel Level Domain Transfer
 
-## and implementations
+## and implementations (which can be found in (TF-101)[https://github.com/sjchoi86/Tensorflow-101])
 - Basic Python usage (numpy, matplotlib, ..)
 - Handling MNIST
 - Logistic regression
