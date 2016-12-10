@@ -1,7 +1,7 @@
 # Deep Learning Tutorial (Paper study + TF implementations)
 ## Topics (papers)
 ### Modern CNNs
-- Alex et al. "ImageNet Classification with Deep Convolutional Neural Networks", NIPS 2012
+- ImageNet Classification with Deep Convolutional Neural Networks
 - Going Deeper with Convolutions (GoogLeNet)
 - Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
 - Deep Residual Learning for Image Recognition
