@@ -70,6 +70,8 @@
 - Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks
 - Generative Adversarial Text to Image Synthesis
 - Pixel Level Domain Transfer
+- Image-to-Image Translation with Conditional Adversarial Networks
+- Plug & Play Generative Networks: Conditional Iterative Generation of Images in Latent Space
 
 ## and implementations (which can be found in [TF-101](https://github.com/sjchoi86/Tensorflow-101))
 - Basic Python usage (numpy, matplotlib, ..)
