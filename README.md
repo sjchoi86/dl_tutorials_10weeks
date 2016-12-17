@@ -1,5 +1,6 @@
 # Deep Learning Tutorial 
 - (Paper study + TF implementations)
+
 ## Topics (papers)
 ### Modern CNNs
 - ImageNet Classification with Deep Convolutional Neural Networks
