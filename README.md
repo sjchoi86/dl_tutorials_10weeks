@@ -1,5 +1,5 @@
 # Deep Learning Tutorial 
-- (Paper study + TF implementations)
+## Paper study + TF implementations
 
 ## Topics (papers)
 ### Modern CNNs
