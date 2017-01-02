@@ -4,7 +4,7 @@
 ## Topics (papers)
 ### Modern CNNs
 - Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "ImageNet Classification with Deep Convolutional Neural Networks", NIPS, 2012
-- Going Deeper with Convolutions (GoogLeNet)
+- Szegedy, Christian, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovic, "Going Deeper with Convolutions", CVPR, 2015
 - Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
 - Deep Residual Learning for Image Recognition
 - Residual Networks are Exponential Ensembles of Relatively Shallow Networks
