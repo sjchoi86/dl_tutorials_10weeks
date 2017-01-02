@@ -3,7 +3,7 @@
 
 ## Topics (papers)
 ### Modern CNNs
-- ImageNet Classification with Deep Convolutional Neural Networks
+- Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "ImageNet Classification with Deep Convolutional Neural Networks", NIPS, 2012
 - Going Deeper with Convolutions (GoogLeNet)
 - Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
 - Deep Residual Learning for Image Recognition
