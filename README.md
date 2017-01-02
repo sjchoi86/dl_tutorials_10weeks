@@ -3,12 +3,12 @@
 
 ## Topics (papers)
 ### Modern CNNs
-- Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "ImageNet Classification with Deep Convolutional Neural Networks", NIPS, 2012
-- Szegedy, Christian, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovic, "Going Deeper with Convolutions", CVPR, 2015
-- Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
-- Deep Residual Learning for Image Recognition
-- Residual Networks are Exponential Ensembles of Relatively Shallow Networks
-- Wide Residual Networks
+- Alex Krizhevsky, et al. "ImageNet Classification with Deep Convolutional Neural Networks", NIPS, 2012
+- Christian Szegedy, et al. "Going Deeper with Convolutions", CVPR, 2015
+- Christian Szegedy, et al. "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning", ArXiv, 2016
+- Kaiming He, et al. "Deep Residual Learning for Image Recognition", CVPR, 2016
+- Andreas Veit, et al. "Residual Networks are Exponential Ensembles of Relatively Shallow Networks", ArXiv, 2016
+- Sergey Zagoruyko and Nikos Komodakis "Wide Residual Networks", ArXiv, 2016
 
 ### Regularization
 - Dropout- A Simple Way to Prevent Neural Networks from Overfitting
