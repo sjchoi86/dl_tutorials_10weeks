@@ -74,6 +74,7 @@
 - Donggeun Yoo et al. "Pixel Level Domain Transfer", ECCV, 2016
 - Phillip Isola et al, "Image-to-Image Translation with Conditional Adversarial Networks", ArXiv, 2016
 - Anh Nguyen et al. "Plug & Play Generative Networks: Conditional Iterative Generation of Images in Latent Space", ArXiv, 2016
+- Scott Reed et al. "Learning What and Where to Draw", NIPS, 2016
 
 ## and implementations (which can be found in [TF-101](https://github.com/sjchoi86/Tensorflow-101))
 - Basic Python usage (numpy, matplotlib, ..)
