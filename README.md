@@ -1,5 +1,5 @@
 # Deep Learning Tutorial 
-### 44 Papers + TF implementations
+### 45 Papers + TF implementations
 
 ## Topics (papers)
 ### Modern CNNs
@@ -42,6 +42,7 @@
 - Joseph Redmon et al. "You Only Look Once: Unified, Real-Time Object Detection", CVPR, 2016
 - Donggeun Yoo et al. "AttentionNet: Aggregating Weak Directions for Accurate Object Detection", ICCV, 2015
 - Wei Liu et al. "SSD: Single Shot MultiBox Detector", ECCV, 2016
+- Joseph Redmon, Ali Farhadi, "YOLO9000: Better, Faster, Stronger", ArXiv, 2017
 
 ### Visual Q&A
 - Hyeonwoo Noh et al. "Image Question Answering using Convolutional Neural Network with Dynamic Parameter Prediction", CVPR, 2015
